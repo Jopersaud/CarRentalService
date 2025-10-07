@@ -1,0 +1,15 @@
+.browse-container {
+  margin-top: var(--navbar-height, 70px); 
+  padding: 24px;
+  box-sizing: border-box;
+  max-width: 1200px;      
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 48px);
+}
+
+.browse-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}

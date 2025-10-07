@@ -1,0 +1,132 @@
+.booking-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #333;
+}
+.booking-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fffefe;
+}
+.booking-content-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 30px;
+}
+@media (min-width: 900px) {
+  .booking-content-container {
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+      "summary calendar"
+      "form calendar";
+  }
+.booking-summary-card {
+    grid-area: summary;
+  }
+.booking-calendar-section {
+    grid-area: calendar;
+  }
+
+.booking-form-section {
+    grid-area: form;
+  }
+}
+.booking-summary-card {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff7f7;
+}
+.booking-summary-card .car-card-link {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+}
+.booking-dates-display {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #000000;
+}
+.booking-dates-display p {
+  margin: 5px 0;
+  font-size: 1.1em;
+}
+.booking-price-summary {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 2px solid #000000;
+}
+.booking-price-summary h3 {
+  color: #2c3e50;
+  font-size: 1.8em;
+}
+.btn-change-dates {
+  background-color: #f39c12;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+.btn-change-dates:hover {
+  background-color: #e67e22;
+}
+.calendar-step-header {
+  margin-bottom: 15px;
+  color: #3498db;
+  text-align: center;
+}
+.form-step-header {
+  margin-bottom: 15px;
+  color: #27ae60;
+  text-align: center;
+}
+.renter-form-placeholder {
+  border: 2px dashed #95a5a6;
+  padding: 20px;
+  text-align: center;
+  border-radius: 6px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf0f1;
+}
+.renter-form-placeholder.disabled-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.renter-form-placeholder.disabled-overlay:before {
+  content: "Please select your rental dates first.";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e74c3c;
+  z-index: 10;
+}
+.booking-dates-display .date-highlight {
+  color: #333; 
+  font-weight: 600;
+}
+.booking-dates-display p {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #333; 
+}
+.booking-price-summary p {
+  color: #333; 
+  font-size: 1.1em;
+  margin: 5px 0;
+}
